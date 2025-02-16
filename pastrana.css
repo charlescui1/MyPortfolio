@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.header {
+    padding: 12px 100px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 1;
+    top: 1px;
+    background:#fdf0d5;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    
+}
+.left-nav {
+    display: flex;
+    align-items: center;;
+}
+.site-logo {
+    width: 48px;
+    border-radius: 25px;
+    animation-name: logoanim;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes logoanim {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    padding: 15px;
+    color: black;
+}
+
+a:hover {
+    color:  blue;
+}
+
+.hire-me {
+    background-color: #fb8500;
+    color: black;
+}
+.hero-section {
+    padding: 20px 90px;
+    margin: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-hero {
+    position: relative;
+
+}
+
+.hero {
+    width: 100%;
+}
+
+.small-logo {
+    position: absolute;
+    top: 275px;
+    left: 100px;
+}
+
+.hero-right {
+    width: 60%;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.hero-heading {
+    font-size: 75px;
+}
+
+.hero-sub-heading {
+    padding: 15px 2px;
+    opacity: 0.7;
+}
+
+.resume-btn, .contact-btn {
+    padding: 15px 35px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    margin: 15px 0;
+    
+}
+
+.resume-btn {
+    background-color: blue;
+    color:white;
+}
+
+p {
+    opacity: 0.7;
+}
+
+/* ABOUT ME */
+.about-section {
+    height: 620px;  
+    background-image: url('images/image1.png');
+    background-size: cover;
+    position: relative;
+}
+
+.about-background {
+    color:white;
+    position: absolute;
+    top: 80px;
+    right: 58%;
+    margin-right: 15px;
+}
+
+.about-me {
+    line-height: 1;
+    font-size: 64px;
+    padding-left: 100px;
+}
+.description {
+    line-height: 1.5;
+    font-size: 22px;
+    padding: 25px 15px;
+    
+}
