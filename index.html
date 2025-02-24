@@ -6,45 +6,90 @@
     <title>MyPortfolio</title>
     <link rel="stylesheet" href="pastrana.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="tablet.css">
 
 <body>
-    <div class="header">
+    <header class="header">
         <div class="left-nav">
             <img class="site-logo" src="images/logo.png" alt="">
-            <h1 class="title">Codespace</h1>
+            <h1 class="title">Charles Pastrana</h1>
         </div>
-        <div class="right-nav">
-            <ul>
-                <a href="#">Home</a>
-                <a href="#about">About</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact</a>
-                <a class="hire-me" href="#">Hire Me</a>
-            </ul>
-        </div>
-    </div>
 
-    <div class="hero-section">
+        <!-- Burger Menu -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <img id="menu-icon" src="images/menu.svg" alt="Menu">
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a class="hire-me" href="https://www.linkedin.com/">Hire Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section">
         <div class="hero-left">
-            <img class="small-logo" src="images/relative.png" alt="">
-            <img class="hero" src="images/hero1.png" alt="">
+            <img class="hero" src="images/profile.png" alt="">
         </div>
         <div class="hero-right">
             <h1 class="hero-heading">Explore My <br> Portfolio</h1>
             <h2 class="hero-sub-heading">Discover My Expertise as a Full-Stack Developer</h2>
             <div class="button">
-                <button class="resume-btn">Resume</button>
-                <button class="contact-btn">Contact</button>
+                <a href=""><button class="resume-btn">Resume</button></a>
+                <a href="#contact"><button class="contact-btn">Contact</button></a>
             </div>
             <p>Crafting Innovative Digital Solutions for Your Business</p>
         </div>
-    </div>
-
-    <div class="about-section" id="about">
+    </section>
+    <!-- Abour me section -->
+    <section class="about-section" id="about">
         <div class="about-background">
             <h1 class="about-me">ABOUT ME</h1>
-            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, quis! Eius doloremque accusantium voluptate assumenda perspiciatis, reprehenderit sunt maiores rem illum placeat eaque tempora exercitationem corrupti qui id eveniet, officiis sequi voluptatibus cum provident quae ipsa at quia expedita. Autem esse suscipit, optio modi qui temporibus unde magni. Earum amet, vero praesentium adipisci cumque eaque error fugit nemo suscipit provident doloremque repellendus aut, molestias recusandae vel rerum, fuga omnis magnam ab? Sed alias vitae est nemo nam provident, quisquam at neque quia eius. Fugiat officiis cum voluptas labore impedit, quam unde adipisci, tempora officia sed, vel quibusdam dolores ducimus quis!</p>
+            <p class="description"> I specialize in designing, developing, and maintaining dynamic and responsive websites. With expertise in front-end and back-end technologies, I create user-friendly interfaces and ensure seamless functionality using modern frameworks, databases, and security best practices. My role involves coding, debugging, optimizing performance, and collaborating with designers and stakeholders to deliver high-quality web applications. I stay updated with the latest industry trends to implement innovative solutions that enhance user experience and business efficiency. Passionate about problem-solving and technology, I strive to build scalable, secure, and efficient web solutions that meet client needs and industry standards.</p>
         </div>
-    </div>
+    </section>
+
+   <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <p>Dive into my world of Full-Stack Development, where innovative ideas come to life. 💡</p>
+        <p>From front-end designs to back-end logic, each project reflects my passion for coding and problem-solving. 🔥</p>
+        <p class="coming-soon">✨ Stay tuned! Exciting projects are in the works and will be unveiled soon. 🚧</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <h1>Contact Me</h1> 
+            <p class="footer-email">Email: charlespastrana@gmail.com</p>
+        </div>
+
+        <div class="footer-bottom"> <hr>
+            <p>@2025 Charles Pastrana. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".menu");
+            const menuIcon = document.getElementById("menu-icon");
+
+            menu.classList.toggle("active"); // Toggle menu visibility
+
+            if (menu.classList.contains("active")) {
+            menuIcon.src = "images/close.svg"; // Change to close icon
+            } else {
+             menuIcon.src = "images/menu.svg"; // Change back to menu icon
+            }
+        }
+    </script>
+        
+
 </body>
 </html>

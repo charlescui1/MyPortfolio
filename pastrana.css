@@ -1,27 +1,68 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
 }
 
 .header {
-    padding: 12px 100px;
     display: flex;
     justify-content: space-between;
-    position: sticky;
-    z-index: 1;
-    top: 1px;
-    background:#fdf0d5;
+    align-items: center;
+    padding: 15px 100px;
+    background: #fdf0d5;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     
 }
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 15px;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: blue;
+}
+/* Burger Menu - Hidden on Desktop */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle img {
+    width: 30px;
+    height: 30px;
+}
+
 .left-nav {
     display: flex;
     align-items: center;;
 }
 .site-logo {
-    width: 48px;
-    border-radius: 25px;
+    width: 50px;
+    border-radius: 50%;
     animation-name: logoanim;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
@@ -56,7 +97,9 @@ a:hover {
 
 .hire-me {
     background-color: #fb8500;
-    color: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 .hero-section {
     padding: 20px 90px;
@@ -64,21 +107,16 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 50px;
 }
 
-.left-hero {
+.hero-left {
     position: relative;
-
 }
 
 .hero {
     width: 100%;
-}
-
-.small-logo {
-    position: absolute;
-    top: 275px;
-    left: 100px;
+    border-radius: 25px;
 }
 
 .hero-right {
@@ -89,21 +127,26 @@ a:hover {
 }
 
 .hero-heading {
-    font-size: 75px;
+    font-size: 50px;
 }
 
 .hero-sub-heading {
-    padding: 15px 2px;
-    opacity: 0.7;
+    padding: 10px 0;
+    opacity: 0.8;
+}
+
+.button {
+    display: flex;
+    gap: 15px;
+    margin: 5px -15px;
 }
 
 .resume-btn, .contact-btn {
-    padding: 15px 35px;
+    padding: 10px 25px;
     font-size: 15px;
     font-weight: 600;
     border: none;
-    margin: 15px 0;
-    
+
 }
 
 .resume-btn {
@@ -117,8 +160,8 @@ p {
 
 /* ABOUT ME */
 .about-section {
-    height: 620px;  
-    background-image: url('images/image1.png');
+    height: 800px;  
+    background-image: url('images/bg.jpg');
     background-size: cover;
     position: relative;
 }
@@ -126,19 +169,107 @@ p {
 .about-background {
     color:white;
     position: absolute;
-    top: 80px;
-    right: 58%;
+    top: 100px;
+    right: auto;
     margin-right: 15px;
+    text-align: center;
+    
 }
 
 .about-me {
     line-height: 1;
-    font-size: 64px;
+    font-size: 40px;
     padding-left: 100px;
+    color: wheat;
 }
 .description {
     line-height: 1.5;
-    font-size: 22px;
+    font-size: 19px;
     padding: 25px 15px;
+    font-weight: 500;
+    color: white;
+
     
+}
+/* Projects Section */
+.projects-section {
+    scroll-margin-top: 80px;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 150px;
+    padding-bottom: 250px;
+}
+
+.projects-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.projects-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.coming-soon {
+    font-weight: bold;
+    color: #d9534f;
+    font-size: 1.2rem;
+}
+
+/* Adjust margin between About Me and Footer */
+.about-section {
+    margin-bottom: 50px;
+}
+
+/* Footer */
+.footer {
+    background-color: whitesmoke; 
+    color: black;
+    padding: 30px 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+
+.footer-email {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 35px;
+    margin-top: 20px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-bottom hr{
+    width: 100%;
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 20px 0;
 }

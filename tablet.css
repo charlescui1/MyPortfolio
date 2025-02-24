@@ -1,0 +1,38 @@
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 15px 50px;
+    }
+
+    .menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 250px;
+        background: #333;
+        flex-direction: column;
+        padding: 20px;
+        display: none;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu a {
+        color: white;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
